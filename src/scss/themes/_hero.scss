@@ -55,6 +55,12 @@
 
 /// Hero image theme styles - full size image with text overlay
 @mixin oTeaserHeroImage {
+
+	@include oGridRespondTo($until: M) {
+		@include oTeaserHeroCentre
+		@include oTeaserHeroCentreImage
+	}
+
 	@include oGridRespondTo(M) {
 		position: relative;
 
