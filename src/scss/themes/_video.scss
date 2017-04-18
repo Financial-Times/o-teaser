@@ -1,26 +1,56 @@
 @mixin oTeaserVideo {
-	.o-teaser__heading:after {
+	.o-teaser__heading:before {
 		@include oIconsGetIcon('play', oColorsGetPaletteColor('white'), 15, $apply-width-height: false, $iconset-version: 1);
 		content: '';
-		background-color: oColorsGetPaletteColor('black');
-		margin-left: 5px;
-		width: 0.5em;
-		height: 0.5em;
+		background-color: oColorsGetPaletteColor('slate');
+		margin-right: 0.25em;
+		width: 0.7em;
+		height: 0.7em;
 		min-width: 12px;
 		min-height: 12px;
 	}
 
 	&.o-teaser--has-image {
-		&.o-teaser--small .o-teaser__heading:after {
-			@include oGridRespondTo(M) {
-				display: none;
-			}
+		.o-teaser__heading:before {
+			content: none;
+		}
+	}
+
+	&.o-teaser--large {
+		// 1. reorder meta to top
+		// 2. reorder image above content
+		// 3. replace borders
+		// 4. centre align image
+
+		$_o-teaser-content-padding: 20px;
+
+		position: relative; // 1
+
+		// this size is roughly the meta component line height + Y content padding
+		padding-top: 58px; // 1
+
+		display: flex; // 2
+		flex-direction: column; // 2
+
+		border: 1px solid $_o-teaser-color-border; // 3
+
+		.o-teaser__meta {
+			position: absolute; // 1
+			top: $_o-teaser-content-padding; // 1
 		}
 
-		&.o-teaser--large .o-teaser__heading:after,
-		&.o-teaser--hero .o-teaser__heading:after,
-		&.o-teaser--top-story .o-teaser__heading:after {
-			display: none;
+		.o-teaser__content {
+			order: 2; // 2
+			border: 0; // 3
+		}
+
+		.o-teaser__image-container {
+			order: 1; // 2
+			padding: 0 $_o-teaser-content-padding; // 4
+
+			&:after {
+				content: none; // 3
+			}
 		}
 	}
 
@@ -33,7 +63,7 @@
 			position: absolute;
 			bottom: 0;
 			left: 0;
-			background-color: oColorsGetPaletteColor('black');
+			background-color: oColorsGetPaletteColor('slate');
 			width: 15%;
 			padding-top: 15%;
 			z-index: 1;
