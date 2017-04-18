@@ -246,7 +246,7 @@
 				"description": "Hero video teaser with duration",
 				"template": "demos/src/demo-hero.mustache",
 				"data": {
-					"article-modifier": ["video", "centre"],
+					"article-modifier": "video",
 					"article-tag-prefix": "Video",
 					"article-tag": "New York Minute",
 					"article-duration": "4:15min",
