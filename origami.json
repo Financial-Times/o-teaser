@@ -102,7 +102,7 @@
 			},
 			{
 				"name": "small-video",
-				"description": "Video teaser with duration",
+				"description": "Small video teaser",
 				"template": "demos/src/demo.mustache",
 				"data": {
 					"article-modifier": "video",
@@ -115,7 +115,7 @@
 			},
 			{
 				"name": "small-video-image",
-				"description": "Video teaser with duration",
+				"description": "Small video teaser with image",
 				"template": "demos/src/demo.mustache",
 				"data": {
 					"article-modifier": "video",
@@ -129,7 +129,7 @@
 			},
 			{
 				"name": "small-video-stacked",
-				"description": "Small teaser with stacked image",
+				"description": "Small video teaser with stacked image",
 				"template": "demos/src/demo.mustache",
 				"data": {
 					"article-modifier": ["video", "stacked"],
@@ -192,7 +192,7 @@
 			},
 			{
 				"name": "large-video",
-				"description": "Large video teaser with duration",
+				"description": "Large video teaser",
 				"template": "demos/src/demo-large.mustache",
 				"data": {
 					"article-modifier": "video",
@@ -243,7 +243,7 @@
 			},
 			{
 				"name": "hero-video",
-				"description": "Hero video teaser with duration",
+				"description": "Hero video teaser",
 				"template": "demos/src/demo-hero.mustache",
 				"data": {
 					"article-modifier": "video",
