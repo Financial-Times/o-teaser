@@ -3,7 +3,7 @@
 		@include oIconsGetIcon('play', oColorsGetPaletteColor('white'), 15, $apply-width-height: false, $iconset-version: 1);
 		content: '';
 		background-color: oColorsGetPaletteColor('slate');
-		margin-right: 0.25em;
+		margin-right: 0.15em;
 		width: 0.7em;
 		height: 0.7em;
 		min-width: 12px;
