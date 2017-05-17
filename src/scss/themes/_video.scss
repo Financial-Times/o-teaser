@@ -16,6 +16,12 @@
 		}
 	}
 
+	&.o-teaser--small {
+		.o-teaser__standfirst {
+			display: none;
+		}
+	}
+
 	// Add play icon overlay
 	.o-teaser__image-placeholder {
 		position: relative;
@@ -41,11 +47,14 @@
 		content: none;
 	}
 
-	.o-teaser__meta:after {
-		// if teaser is used with --stretch variation then this element
-		// will contain this margin creating a double-height gap.
-		&:after {
-			margin-bottom: 0;
+	&.o-teaser--hero {
+		// this teaser has a little underline below the metadata element with a margin...
+		.o-teaser__meta {
+			// ...but if this teaser is used with --stretch variation then the metadata
+			// element will contain this margin, creating a double-height gap.
+			&:after {
+				margin-bottom: 0;
+			}
 		}
 	}
 
