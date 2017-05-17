@@ -41,6 +41,14 @@
 		content: none;
 	}
 
+	.o-teaser__meta:after {
+		// if teaser is used with --stretch variation then this element
+		// will contain this margin creating a double-height gap.
+		&:after {
+			margin-bottom: 0;
+		}
+	}
+
 	.o-teaser__image-container {
 		margin: 1em 0 0.5em;
 	}
