@@ -6,6 +6,9 @@
 			<div class="o-teaser__meta">
 				{{#article-tag-prefix}}<span class="o-teaser__tag-prefix">{{.}}</span>{{/article-tag-prefix}}
 				<a href="#" class="o-teaser__tag">{{article-tag}}</a>
+				{{#article-duration}}
+					<time class="o-teaser__duration" datetime="PT3M07S">3:07min</time>
+				{{/article-duration}}
 			</div>
 
 			{{#article-image-url}}
@@ -17,10 +20,6 @@
 			{{/article-image-url}}
 
 			<h2 class="o-teaser__heading"><a href="#">{{article-heading}}</a></h2>
-
-			{{#article-duration}}
-				<time class="o-teaser__duration" datetime="PT3M07S">3:07min</time>
-			{{/article-duration}}
 
 			{{#article-timestamp}}
 				<time data-o-component="o-date" class="o-date o-teaser__timestamp" datetime="{{article-timestamp}}">{{article-timestamp}}</time>
