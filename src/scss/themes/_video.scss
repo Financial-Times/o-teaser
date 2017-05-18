@@ -11,12 +11,20 @@
 	}
 
 	&.o-teaser--has-image {
+		// hide the title prefix icon if there is an image...
 		.o-teaser__heading:before {
 			content: none;
 		}
 	}
 
 	&.o-teaser--small {
+		// ... except for when the images are hidden on small teasers
+		@include oGridRespondTo($until: 'M') {
+			.o-teaser__heading:before {
+				content: '';
+			}
+		}
+
 		.o-teaser__standfirst {
 			display: none;
 		}
