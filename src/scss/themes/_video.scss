@@ -9,28 +9,40 @@
 		min-width: 12px;
 		min-height: 12px;
 	}
+}
 
-	&.o-teaser--has-image {
-		// hide the title prefix icon if there is an image...
-		.o-teaser__heading:before {
-			content: none;
-		}
+@mixin oTeaserBigVideo {
+	// This variation assumes no --has-image variation as it
+	// is too specific and quirky to try and override!
+	// It is designed to work with --large, --hero and --top-story variations.
+
+	// hide the title prefix icon
+	.o-teaser__heading:before {
+		content: none;
 	}
 
-	&.o-teaser--small {
-		// ... except for when the images are hidden on small teasers
-		@include oGridRespondTo($until: 'M') {
-			.o-teaser__heading:before {
-				content: '';
-			}
-		}
-
-		.o-teaser__standfirst {
-			display: none;
-		}
+	.o-teaser__image-container {
+		// use padding instead of margins so we don't have to worry about
+		// the --stretch (flexbox) variant containing margins and doubling up.
+		padding: 0 0 0.75em;
 	}
 
-	// Add play icon overlay
+	&.o-teaser--large .o-teaser__image-container,
+	&.o-teaser--hero .o-teaser__image-container {
+		padding-left: 10%;
+		padding-right: 10%;
+	}
+
+	&.o-teaser--large .o-teaser__image-container {
+		padding-top: 1em;
+	}
+
+	&.o-teaser--hero .o-teaser__image-container {
+		padding-top: 0.5em;
+	}
+
+	// Add play icon overlay for image...
+	// the intention is for this to be swapped with an o-video instance.
 	.o-teaser__image-placeholder {
 		position: relative;
 
@@ -45,28 +57,5 @@
 			padding-top: 15%;
 			z-index: 1;
 		}
-	}
-}
-
-@mixin oTeaserBigVideo {
-	// this variation assumes no --has-image variation...
-	// it's way too specific and quirky to try and override
-	.o-teaser__heading:before {
-		content: none;
-	}
-
-	&.o-teaser--hero {
-		// this teaser has a little underline below the metadata element with a margin...
-		.o-teaser__meta {
-			// ...but if this teaser is used with --stretch variation then the metadata
-			// element will contain this margin, creating a double-height gap.
-			&:after {
-				margin-bottom: 0;
-			}
-		}
-	}
-
-	.o-teaser__image-container {
-		margin: 1em 0 0.5em;
 	}
 }
