@@ -58,7 +58,6 @@
 @mixin oTeaserMeta {
 	@include font-size(16, 18);
 	@include oColorsFor('o-teaser-tag', 'text');
-	margin: 0;
 }
 
 /// Tag styling.
