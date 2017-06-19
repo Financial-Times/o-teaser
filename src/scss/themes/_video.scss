@@ -9,6 +9,48 @@
 		min-width: 12px;
 		min-height: 12px;
 	}
+
+	&.o-teaser--has-image {
+		// hide the title prefix icon if there is an image...
+		.o-teaser__heading:before {
+			content: none;
+		}
+
+
+	}
+
+	&.o-teaser--small {
+		// ...except for when the image is hidden on small teasers on narrow viewports
+		@include oGridRespondTo($until: 'M') {
+			.o-teaser__heading:before {
+				content: '';
+			}
+		}
+	}
+
+	// always hide the standfirst
+	.o-teaser__standfirst {
+		display: none;
+	}
+
+	// Add play icon overlay for image
+	.o-teaser__image-placeholder {
+		position: relative;
+
+		&:after {
+			@include oIconsGetIcon('play', oColorsGetPaletteColor('white'), 30, $apply-width-height: false, $iconset-version: 1);
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			z-index: 1;
+			width: 15%;
+			padding-top: 15%;
+			min-width: 20px;
+			min-height: 20px;
+			background-color: oColorsGetPaletteColor('slate');
+		}
+	}
 }
 
 @mixin oTeaserBigVideo {
@@ -39,23 +81,5 @@
 
 	&.o-teaser--hero .o-teaser__image-container {
 		padding-top: 0.5em;
-	}
-
-	// Add play icon overlay for image...
-	// the intention is for this to be swapped with an o-video instance.
-	.o-teaser__image-placeholder {
-		position: relative;
-
-		&:after {
-			@include oIconsGetIcon('play', oColorsGetPaletteColor('white'), 30, $apply-width-height: false, $iconset-version: 1);
-			content: '';
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			background-color: oColorsGetPaletteColor('slate');
-			width: 15%;
-			padding-top: 15%;
-			z-index: 1;
-		}
 	}
 }
