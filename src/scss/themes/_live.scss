@@ -1,30 +1,42 @@
 @mixin oTeaserThemeLive {
-    .o-teaser--small.o-teaser--live .o-teaser__content {
-        padding: 12px;
-    }
-
-    .o-teaser--small.o-teaser--live.o-teaser--has-image {
-        padding: 12px;
-        .o-teaser__content {
-            padding: 0px;
-        }
-    }
-
-    .o-teaser--small.o-teaser--live {
-        // create white text red background
+    // all
+    // > create white text red background
+    .o-teaser--small.o-teaser--live,
+    .o-teaser--hero.o-teaser--live .o-teaser__content,
+    .o-teaser--hero.o-teaser--live .o-teaser__image-container,
+    .o-teaser--large.o-teaser--live .o-teaser__content,
+    .o-teaser--top-story.o-teaser--landscape.o-teaser--live {
         @include oTeaserInverse;
         background: oColorsGetPaletteColor('crimson');
-        .o-teaser__content * {
-            color: white;
-            &:hover {
-                color: white;
-            }
+        border: none;
+    }
+
+    .o-teaser__content, .o-teaser__meta {
+        color: white;
+    }
+
+    .o-teaser__tag:hover {
+        color: oColorsMix(oColorsGetPaletteColor('crimson'), oColorsGetPaletteColor('white'), 30) !important;
+    }
+
+    .o-teaser--small.o-teaser--live,
+    .o-teaser--hero.o-teaser--live,
+    .o-teaser--hero.o-teaser--live,
+    .o-teaser--large.o-teaser--live,
+    .o-teaser--top-story.o-teaser--landscape.o-teaser--live {
+        * {
+            color: oColorsGetPaletteColor('white');
         }
+        *:hover {
+            color: oColorsMix(oColorsGetPaletteColor('crimson'), oColorsGetPaletteColor('white'), 30);
+        }
+        // circle next to LIVE
         .o-teaser__timestamp-prefix:before,
         .o-teaser__timestamp--inprogress:before {
-            background-color: white;
+            background-color: oColorsGetPaletteColor('white');
         }
     }
+
     .o-teaser--live {
         // move "LIVE" to the top without changing the HTML
         .o-teaser__content {
@@ -37,5 +49,46 @@
         .o-teaser__timestamp time {
             display: none;
         }
+    }
+
+    // small
+    .o-teaser--small.o-teaser--live {
+        padding-bottom: 0;
+
+        .o-teaser__content {
+            padding: 8px 12px;
+        }
+        .o-teaser__timestamp.o-teaser__timestamp--inprogress {
+            margin: 0;
+        }
+    }
+
+    .o-teaser--small.o-teaser--live.o-teaser--has-image {
+        padding: 8px 12px;
+        .o-teaser__content {
+            padding: 0px;
+        }
+    }
+
+    // changes specific to teasers in particular and cannot be applied everywhere
+    .o-teaser--large.o-teaser--live.o-teaser--has-image .o-teaser__image-container:after,
+    .o-teaser--large.o-teaser--live.o-teaser--has-image .o-teaser__content:after,
+    .o-teaser--hero.o-teaser--live.o-teaser--has-image .o-teaser__image-container:after {
+        background: oColorsGetPaletteColor('crimson');
+        border: none;
+        top: 0;
+    }
+
+    .o-teaser--hero.o-teaser--live .o-teaser__meta:after,
+    .o-teaser--top-story.o-teaser--live.o-teaser--landscape .o-teaser__related {
+        border-color: oColorsGetPaletteColor('white');
+    }
+
+    .o-teaser--top-story.o-teaser--standalone.o-teaser--live .o-teaser__meta a {
+        color: oColorsGetPaletteColor('crimson');
+    }
+
+    .o-teaser--large.o-teaser--live .o-teaser__content {
+        padding: 3px 12px;
     }
 }
