@@ -15,19 +15,22 @@
         color: white;
     }
 
-    .o-teaser__tag:hover {
-        color: oColorsMix(oColorsGetPaletteColor('crimson'), oColorsGetPaletteColor('white'), 30) !important;
-    }
-
     .o-teaser--small.o-teaser--live,
-    .o-teaser--hero.o-teaser--live,
     .o-teaser--hero.o-teaser--live,
     .o-teaser--large.o-teaser--live,
     .o-teaser--top-story.o-teaser--landscape.o-teaser--live {
         * {
             color: oColorsGetPaletteColor('white');
         }
-        *:hover {
+        // *:hover {
+        //     color: oColorsMix(oColorsGetPaletteColor('crimson'), oColorsGetPaletteColor('white'), 30);
+        // }
+
+        .o-teaser__heading:hover,
+        .o-teaser__heading:focus,
+        .o-teaser__tag:hover,
+        .o-teaser__tag:focus,
+        .js-teaser-heading-link:hover {
             color: oColorsMix(oColorsGetPaletteColor('crimson'), oColorsGetPaletteColor('white'), 30);
         }
         // circle next to LIVE
@@ -90,5 +93,10 @@
 
     .o-teaser--large.o-teaser--live .o-teaser__content {
         padding: 3px 12px;
+    }
+    .o-teaser--hero, .o-teaser--large {
+        &.o-teaser--live .o-teaser__content .o-teaser__tag:hover {
+            color: oColorsMix(oColorsGetPaletteColor('crimson'), oColorsGetPaletteColor('white'), 30);
+        }
     }
 }
