@@ -29,9 +29,9 @@
 
         .o-teaser__heading:hover,
         .o-teaser__heading:focus,
+        .o-teaser__heading a:hover,
         .o-teaser__tag:hover,
-        .o-teaser__tag:focus,
-        .js-teaser-heading-link:hover {
+        .o-teaser__tag:focus {
             color: oColorsMix(oColorsGetPaletteColor('crimson'), oColorsGetPaletteColor('white'), 30);
         }
         // circle next to LIVE
