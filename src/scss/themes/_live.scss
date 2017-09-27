@@ -3,18 +3,17 @@
     // > create white text red background
     .o-teaser--small.o-teaser--live,
     .o-teaser--hero.o-teaser--live .o-teaser__content,
-    .o-teaser--hero.o-teaser--live .o-teaser__image-container,
+    .o-teaser--hero.o-teaser--live .o-teaser__image-container:after,
     .o-teaser--large.o-teaser--live .o-teaser__content,
     .o-teaser--top-story.o-teaser--landscape.o-teaser--live {
         @include oTeaserInverse;
         background: oColorsGetPaletteColor('crimson');
-        border: none;
+        border-color: oColorsGetPaletteColor('crimson');
 
         .o-teaser__content, .o-teaser__meta {
             color: oColorsGetPaletteColor('white');
         }
     }
-
 
     .o-teaser--small.o-teaser--live,
     .o-teaser--hero.o-teaser--live,
@@ -79,8 +78,7 @@
     .o-teaser--large.o-teaser--live.o-teaser--has-image .o-teaser__content:after,
     .o-teaser--hero.o-teaser--live.o-teaser--has-image .o-teaser__image-container:after {
         background: oColorsGetPaletteColor('crimson');
-        border: none;
-        top: 0;
+        border-color: oColorsGetPaletteColor('crimson');
     }
 
     .o-teaser--hero.o-teaser--live .o-teaser__meta:after,
