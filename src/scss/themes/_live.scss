@@ -98,4 +98,11 @@
             color: oColorsMix(oColorsGetPaletteColor('crimson'), oColorsGetPaletteColor('white'), 30);
         }
     }
+
+    .o-teaser--stacked.o-teaser--has-image.o-teaser--live {
+        padding: 0px;
+        .o-teaser__content {
+            padding: 0px 12px 8px;
+        }
+    }
 }
