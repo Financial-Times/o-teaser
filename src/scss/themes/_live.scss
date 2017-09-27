@@ -10,7 +10,8 @@
         background: oColorsGetPaletteColor('crimson');
         border-color: oColorsGetPaletteColor('crimson');
 
-        .o-teaser__content, .o-teaser__meta {
+        .o-teaser__content,
+        .o-teaser__meta {
             color: oColorsGetPaletteColor('white');
         }
     }
@@ -93,7 +94,9 @@
     .o-teaser--large.o-teaser--live .o-teaser__content {
         padding: 3px 12px;
     }
-    .o-teaser--hero, .o-teaser--large {
+
+    .o-teaser--hero,
+    .o-teaser--large {
         &.o-teaser--live .o-teaser__content .o-teaser__tag:hover {
             color: oColorsMix(oColorsGetPaletteColor('crimson'), oColorsGetPaletteColor('white'), 30);
         }
