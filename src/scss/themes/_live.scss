@@ -9,11 +9,12 @@
         @include oTeaserInverse;
         background: oColorsGetPaletteColor('crimson');
         border: none;
+
+        .o-teaser__content, .o-teaser__meta {
+            color: oColorsGetPaletteColor('white');
+        }
     }
 
-    .o-teaser__content, .o-teaser__meta {
-        color: white;
-    }
 
     .o-teaser--small.o-teaser--live,
     .o-teaser--hero.o-teaser--live,
