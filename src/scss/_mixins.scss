@@ -35,8 +35,6 @@
 		@include oTeaserThemeTopStories;
 	} @else if $theme == 'video' {
 		@include oTeaserThemeVideo;
-	} @else if $theme == 'package' {
-		@include oTeaserThemePackage;
 	} @else if $theme == 'live' {
 		@include oTeaserThemeLive;
 	}
@@ -237,21 +235,5 @@
 
 	.o-teaser__duration {
 		@include oTeaserDuration;
-	}
-}
-
-@mixin oTeaserThemePackage {
-	.o-teaser--basic-package,
-	.o-teaser--special-report-package,
-	.o-teaser--extra-package {
-		@include oTeaserPackage;
-	}
-
-	.o-teaser--special-report-package {
-		@include oTeaserSpecialReportPackage;
-	}
-
-	.o-teaser--extra-package {
-		@include oTeaserExtraPackage;
 	}
 }

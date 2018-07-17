@@ -26,13 +26,6 @@
 @include oColorsSetUseCase(o-teaser-theme-paid-post, background, 'white');
 @include oColorsSetUseCase(o-teaser-theme-promoted-content, background, 'white');
 
-// Package teasers
-@include oColorsSetUseCase(o-teaser-package-basic, background, 'wheat');
-@include oColorsSetUseCase(o-teaser-package-basic, text, 'claret-70');
-@include oColorsSetUseCase(o-teaser-package-basic, border, 'claret-70');
-@include oColorsSetUseCase(o-teaser-package-basic-hover, text, 'claret-30');
-@include oColorsSetUseCase(o-teaser-package-special-report, background, 'claret-70');
-
 // Timestamp - Live blog
 @include oColorsSetColor(live-blog-closed, oColorsGetPaletteColor('black-60'));
 @include oColorsSetColor(live-blog-coming-soon, #fd9d00); // TODO: Ask a designer what color from the palette this should be
