@@ -14,18 +14,15 @@
 	}
 }
 
-/// Standalone top story theme styles
-@mixin oTeaserTopStoryStandalone {
-	.o-teaser__image-container {
-		margin-bottom: 20px;
-	}
-}
-
 /// Landscape top story theme styles
 @mixin oTeaserTopStoryLandscape {
 	@include oTeaserClearfix;
 	@include oColorsFor('o-teaser-hero', background);
 	padding: 12px;
+
+	.o-teaser__image-container {
+		margin-bottom: 20px;
+	}
 
 	@include oGridRespondTo(M) {
 		padding: 20px 0 0 20px;

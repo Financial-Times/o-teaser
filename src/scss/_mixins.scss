@@ -160,10 +160,6 @@
 				@include oTeaserHeroImage;
 			}
 		}
-
-		&.o-teaser--standalone {
-			@include oTeaserHeroStandalone;
-		}
 	}
 
 	.o-teaser--centre {
@@ -196,21 +192,12 @@
 			@include oTeaserHeroExtra;
 		}
 	}
-
-	.o-teaser--midslice.o-teaser--has-image {
-		@include oTeaserHeroMidSlice;
-	}
 }
 
 @mixin oTeaserThemeTopStories {
 	.o-teaser--top-story {
 		@include oTeaserLarge;
 		@include oTeaserTopStoryBase;
-
-		&.o-teaser--landscape,
-		&.o-teaser--standalone {
-			@include oTeaserTopStoryStandalone;
-		}
 
 		&.o-teaser--landscape,
 		&.o-teaser--big-story {
