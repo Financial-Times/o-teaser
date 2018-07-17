@@ -196,10 +196,6 @@
 			@include oTeaserHeroExtra;
 		}
 	}
-
-	.o-teaser--midslice.o-teaser--has-image {
-		@include oTeaserHeroMidSlice;
-	}
 }
 
 @mixin oTeaserThemeTopStories {
