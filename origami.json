@@ -219,25 +219,6 @@
 			}
 		},
 		{
-			"title": "Small Video Stacked",
-			"name": "small-video-stacked",
-			"description": "Small video teaser with stacked image",
-			"template": "demos/src/demo.mustache",
-			"data": {
-				"article-modifier": [
-					"video",
-					"stacked"
-				],
-				"article-tag-prefix": "Video",
-				"article-tag": "World",
-				"article-duration": "4:15min",
-				"article-image-url": "https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fim.ft-static.com%2Fcontent%2Fimages%2Fa60ae24b-b87f-439c-bf1b-6e54946b4cf2.img?width=280&source=o-teaser-demo",
-				"article-timestamp": "2016-02-29T12:35:48Z",
-				"article-heading": "Japan sells negative yield 10-year bonds",
-				"article-standfirst": "Bondholders pay government for the privilege of lending it money"
-			}
-		},
-		{
 			"title": "Opinion",
 			"name": "opinion",
 			"description": "Opinion teaser with no image",
@@ -441,13 +422,13 @@
 			}
 		},
 		{
-			"title": "Top Story Video",
+			"title": "Top Story Landscape with Video",
 			"name": "top-story-video",
-			"description": "Top story video teaser big story theme",
+			"description": "Top story teaser landscape theme with video",
 			"template": "demos/src/demo-top-story.mustache",
 			"hidden": true,
 			"data": {
-				"article-modifier": "video",
+				"article-modifier": ["video", "landscape"],
 				"article-tag-prefix": "Video",
 				"article-tag": "New York Minute",
 				"article-duration": "4:15min",
@@ -562,10 +543,10 @@
 			}
 		},
 		{
-			"title": "Big Video Large",
-			"name": "big-video-large",
-			"description": "Large 'big video' teaser",
-			"template": "demos/src/demo-big-video.mustache",
+			"title": "Large teaser with video",
+			"name": "large-video",
+			"description": "Large teaser with inline playable video",
+			"template": "demos/src/demo-video.mustache",
 			"data": {
 				"article-modifier": "large",
 				"article-tag-prefix": "Video",
@@ -577,10 +558,10 @@
 			}
 		},
 		{
-			"title": "Big Video Hero",
-			"name": "big-video-hero",
-			"description": "Hero 'big video' teaser",
-			"template": "demos/src/demo-big-video.mustache",
+			"title": "Hero teaser with video",
+			"name": "hero-video",
+			"description": "Hero teaser with inline playable video",
+			"template": "demos/src/demo-video.mustache",
 			"data": {
 				"article-modifier": "hero",
 				"article-tag-prefix": "Video",
