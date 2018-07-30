@@ -131,10 +131,6 @@
 		@include oTeaserLarge;
 	}
 
-	.o-teaser--large-portrait {
-		@include oTeaserLargeImagePortrait;
-	}
-
 	.o-teaser--large.o-teaser--has-image {
 		@include oTeaserImageContainer;
 		@include oTeaserLargeWithImage;
