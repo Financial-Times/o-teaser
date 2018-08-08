@@ -324,7 +324,7 @@
 			}
 		},
 		{
-			"title": "Hero Extra Centered",
+			"title": "Hero Extra Centred",
 			"name": "hero-extra",
 			"description": "Hero teaser extra theme centred",
 			"template": "demos/src/demo-hero.mustache",
