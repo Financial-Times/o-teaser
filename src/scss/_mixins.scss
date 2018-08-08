@@ -127,18 +127,8 @@
 }
 
 @mixin oTeaserThemeLarge {
-	.o-teaser--large,
-	.o-teaser--large-portrait,
-	.o-teaser--large-landscape {
+	.o-teaser--large {
 		@include oTeaserLarge;
-	}
-
-	.o-teaser--large-portrait {
-		@include oTeaserLargeImagePortrait;
-	}
-
-	.o-teaser--large-landscape {
-		@include oTeaserLargeImageLandscape;
 	}
 
 	.o-teaser--large.o-teaser--has-image {
