@@ -85,13 +85,8 @@
 	}
 
 	.o-teaser__standfirst,
-	.o-teaser__timestamp,
-	.o-teaser__timestamp-prefix:before {
+	.o-teaser__timestamp {
 		@include oColorsFor('o-teaser-hero-highlight', text, 80);
-	}
-
-	.o-teaser__timestamp-prefix:before {
-		background-color: oColorsMix(oColorsGetPaletteColor('white'), oColorsGetColorFor('o-teaser-hero-highlight', background), 80);
 	}
 
 	&.o-teaser--hero {
