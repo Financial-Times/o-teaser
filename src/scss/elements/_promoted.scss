@@ -20,6 +20,7 @@
 
 	.o-teaser__promoted-prefix {
 		@include oLabelsContent($opts: ('state': 'content-commercial', 'base': true, 'size': 'small'));
+		@include oTypographyBold('sans');
 	}
 }
 
@@ -39,5 +40,6 @@
 
 	.o-teaser__promoted-prefix {
 		@include oLabelsContent($opts: ('state': 'content-commercial', 'base': true, 'size': 'small'));
+		@include oTypographyBold('sans');
 	}
 }
