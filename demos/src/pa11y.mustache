@@ -787,7 +787,7 @@
 </div>
 
 <div class="demo-container demo-container--inverse">
-	<div class="o-teaser o-teaser--large o-teaser--inverse" data-o-component="o-teaser">
+	<div class="o-teaser o-teaser--large o-teaser--inverse o-teaser--live" data-o-component="o-teaser">
 		<div class="o-teaser__content">
 			<div class="o-teaser__meta">
 				<a href="#" class="o-teaser__tag">{{article-tag}}</a>
@@ -800,7 +800,10 @@
 			{{/article-standfirst}}
 
 			{{#article-timestamp}}
-				<time data-o-component="o-date" class="o-date o-teaser__timestamp" datetime="{{article-timestamp}}">{{article-timestamp}}</time>
+				<div class="o-teaser__timestamp o-teaser__timestamp--inprogress">
+					<span class="o-teaser__timestamp-prefix">Live</span>
+					<time data-o-component="o-date" class="o-date o-teaser__timestamp" datetime="{{article-timestamp}}">{{article-timestamp}}</time>
+				</div>
 			{{/article-timestamp}}
 		</div>
 	</div>
