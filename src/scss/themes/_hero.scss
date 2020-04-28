@@ -15,7 +15,7 @@
 		width: 60px;
 		border-bottom: oSpacingByIncrement(1) solid oColorsByName('claret');
 		margin-top: oSpacingByName('s1');
-		margin-bottom: oSpacingByName('s3');
+		margin-bottom: oSpacingByName('s2');
 	}
 }
 
@@ -160,6 +160,10 @@
 @mixin _oTeaserHeroCentre {
 	.o-teaser__content {
 		text-align: center;
+	}
+
+	.o-teaser__heading {
+		@include oTypographyDisplay($scale: 4);
 	}
 
 	.o-teaser__meta:after {
