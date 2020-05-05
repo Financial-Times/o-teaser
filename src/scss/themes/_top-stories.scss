@@ -24,8 +24,6 @@
 /// Landscape top story theme styles
 @mixin _oTeaserTopStoryLandscape {
 	@include oNormaliseClearfix;
-	background: oColorsByUsecase('o-teaser/hero', 'background');
-	padding: 12px;
 
 	@include oGridRespondTo(M) {
 		padding: 20px 0 0 20px;
@@ -46,21 +44,12 @@
 			padding-right: 20px;
 		}
 	}
+	background: oColorsByUsecase('o-teaser/hero', 'background');
+	padding: 12px;
 }
 
 /// Big Story top story theme styles
 @mixin _oTeaserTopStoryBigStory {
-	margin-bottom: 0;
-	padding: 0;
-	border-bottom: 0;
-
-	.o-teaser__image-placeholder {
-		padding-bottom: 100%;
-	}
-
-	.o-teaser__content {
-		padding: 60px 0 12px;
-	}
 
 	@include oGridRespondTo(M) {
 		.o-teaser__content {
@@ -79,5 +68,16 @@
 		.o-teaser__image-container {
 			margin-bottom: 0;
 		}
+	}
+	margin-bottom: 0;
+	padding: 0;
+	border-bottom: 0;
+
+	.o-teaser__image-placeholder {
+		padding-bottom: 100%;
+	}
+
+	.o-teaser__content {
+		padding: 60px 0 12px;
 	}
 }

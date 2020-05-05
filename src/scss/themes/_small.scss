@@ -11,29 +11,29 @@
 	}
 
 	.o-teaser__image-container {
-		width: 30%;
-		// because flex items are allowed to shrink implicitly
-		flex-shrink: 0;
-		padding-right: oGridGutter(M);
 
 		@include oGridRespondTo($until: M) { // Mobile screens only
 			display: none;
 		}
+		width: 30%;
+		// because flex items are allowed to shrink implicitly
+		flex-shrink: 0;
+		padding-right: oGridGutter(M);
 	}
 }
 
 /// Small teaser styles for a stacked image
 /// image will appear 100% width at the top of the teaser
 @mixin _oTeaserSmallStacked {
-	flex-direction: column;
-
-	.o-teaser__content {
-		flex-basis: auto; // must override original .o-teaser__content flex-basis
-	}
 
 	@include oGridRespondTo(M) {
 		border-bottom: 0;
 		padding-bottom: 0;
+	}
+	flex-direction: column;
+
+	.o-teaser__content {
+		flex-basis: auto; // must override original .o-teaser__content flex-basis
 	}
 
 	.o-teaser__image-container {

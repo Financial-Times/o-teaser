@@ -1,13 +1,13 @@
 /// Related content list styles
 @mixin _oTeaserRelated {
-	list-style: disc outside;
-	padding-left: 30px;
-	margin: 0 0 20px;
-	border-left: 1px solid oColorsByName('black-20');
 
 	@include oGridRespondTo($until: M) {
 		display: none;
 	}
+	list-style: disc outside;
+	padding-left: 30px;
+	margin: 0 0 20px;
+	border-left: 1px solid oColorsByName('black-20');
 }
 
 /// Single related content item styles
