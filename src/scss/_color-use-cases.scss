@@ -1,7 +1,7 @@
 @include oColorsSetUseCase('o-teaser/base', (
 	'background': 'paper',
 	'text': oColorsGetTextColor('paper', 100),
-    'border': 'black-20',
+	'border': 'black-20',
 ));
 @include oColorsSetUseCase('o-teaser/hero', (
 	'background': 'wheat',
@@ -65,7 +65,7 @@
 @include oColorsSetUseCase('o-teaser/package-basic', (
 	'background': 'wheat',
 	'text': 'claret-70',
-    'border': 'claret-70'
+	'border': 'claret-70'
 ));
 @include oColorsSetUseCase('o-teaser/package-basic-hover', (
 	'text': 'claret-30'
@@ -86,5 +86,5 @@
 @include oColorsSetUseCase('o-teaser/fast-ft', (
 	'text': 'o-teaser/fastft-brand',
 	'border': 'o-teaser/fastft-brand',
-    'background': 'o-teaser/fastft-brand'
+	'background': 'o-teaser/fastft-brand'
 ));
