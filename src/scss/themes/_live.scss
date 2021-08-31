@@ -21,12 +21,14 @@
             }
         }
 
+        .o-teaser__meta a,
         .o-teaser__heading a,
         .o-teaser__standfirst a {
             &:focus,
             &:hover,
             &:visited {
                 color: oColorsMix(white, crimson, 90);
+                outline-color: currentColor;
             }
         }
 
