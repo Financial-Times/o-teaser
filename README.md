@@ -1,5 +1,11 @@
 # o-teaser
 
+***
+
+**This component has moved to the [Origami Component System](https://github.com/Financial-Times/origami).**
+
+***
+
 This component is for displaying teasers which link through to articles.
 
 - [Usage](#usage)
